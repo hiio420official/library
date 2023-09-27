@@ -1,6 +1,5 @@
 # IntelliJ
 
----
 
 1. Remote 관리
 
