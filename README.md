@@ -6,7 +6,11 @@
 
 ## IDE
 
-
-
 ### 1. [IntelliJ](https://github.com/hiio420official/library/blob/main/IDE/IntelliJ/README.md)
+
+
+## Technical Term
+
+### 1. [용어 정리](https://github.com/hiio420official/library/blob/main/TechnicalTerm/README.md)
+
 
