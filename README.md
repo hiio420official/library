@@ -17,4 +17,4 @@
 ### 1. [용어 정리](https://github.com/hiio420official/library/blob/main/TechnicalTerm/README.md)
 
 정리중....
-.
+..
