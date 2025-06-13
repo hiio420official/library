@@ -1,19 +1,24 @@
 // cats.controller.ts
-import { HttpStatus, HttpException } from "@nestjs/common";
+import { HttpStatus, HttpException, UseGuards } from "@nestjs/common";
 import { Controller, Get, Param, NotFoundException } from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { ForbiddenException } from '../common/exception/forbidden.exception';
+import { RolesGuard } from "src/roles/roles.guard";
+import { Roles } from "src/roles/roles.decorator";
 @Controller('cats')
+@UseGuards(new RolesGuard())
 export class CatsController {
     constructor(private readonly catsService: CatsService) { }
 
     @Get()
+    @UseGuards(RolesGuard)
     async findAll() {
         throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
     }
 
 
     @Get()
+    @Roles(["admin"])
     async findAll() {
         try {
             await this.service.findAll()
